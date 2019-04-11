@@ -61,7 +61,8 @@ public class BST<T>{
 	public void insert(Comparable value) { // between O(n and log n)
 		root = insert(root, value);
 	}
-
+	
+	// insert node at a specific position
 	private BSTNode insert(BSTNode node, Comparable value){ //O()
 		if(node == null){
 		    BSTNode n = new BSTNode(value);
@@ -81,7 +82,8 @@ public class BST<T>{
 	public boolean find(Comparable value) {
 		return find(root, value);
 	}
-
+	
+	// recursively find value we are looking for
 	private boolean find(BSTNode node, Comparable value) { // between O(n and log n)
 
 		if (node == null) {
@@ -102,7 +104,7 @@ public class BST<T>{
 	public void print(){
         print(root);
     }
-
+	// print system
 	public void print(BSTNode node) { // O(n)
 		if (node != null) {
 			print(node.get_Left());
